@@ -27,12 +27,12 @@ class Minify
   /**
    * @var
    */
-  private $provider;
+  protected $provider;
 
   /**
    * @var
    */
-  private $buildPath;
+  protected $buildPath;
 
   /**
    * @var bool
@@ -47,7 +47,7 @@ class Minify
   /**
    * @var bool
    */
-  private $buildExtension;
+  protected $buildExtension;
    
 
   /**
@@ -158,7 +158,7 @@ class Minify
   /**
    * @param $file
    */
-  private function process($file) {
+  protected function process($file) {
     $this->provider->add($file);
 
     if($this->minifyForCurrentEnvironment() && $this->provider->make($this->buildPath))
